@@ -19,7 +19,7 @@ namespace QnDoptimiser
                 return;
             }
 
-            string filename = string.Join(" ", args);
+            string filename = string.Join(" ", args).Replace("\"",""); // Convert args[] to single string, and delete enclosing quotes.
 
             if (!File.Exists(filename))
             {
